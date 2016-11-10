@@ -1,7 +1,10 @@
 # jQuery.yuukCountdown.js
-jQuery毫秒倒计时插件
-# 使用方法
 
+jQuery毫秒倒计时插件
+
+预览地址：http://htmlpreview.github.io/?https://github.com/yuuk/jQuery.yuukCountdown.js/blob/master/index.html
+
+# 使用方法
 ```javascript
 $(function(){
     $('#js-countDown').yuukCountDown({
