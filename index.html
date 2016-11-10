@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery秒表倒计时 jQuery.yuukCountdown.js</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+    <script type="text/javascript" src="js/jQuery.yuukCountdown.js" ></script>
+    <script>
+        $(function(){
+            $('#js-countDown').yuukCountDown({
+                starttime: '2016/11/10 00:00:00',
+                endtime: '2016/12/31 10:59:59',
+                notStartCallBack: function(time){
+                    console.log("未开始！");
+                },
+                startCallBack: function(time){
+                    console.log("开始中！");
+                },
+                endCallBack: function(time){
+                    console.log("已结束！");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+	<div class="countdown">
+		<div class="countdown-time">
+			<ul class="clearfix" id="js-countDown">
+                <li class="item"><i class="day">00</i><span>days</span></li>
+                <li class="blank">:</li>
+                <li class="item"><i class="hour">00</i><span>hours</span></li>
+                <li class="blank">:</li>
+                <li class="item"><i class="minute">00</i><span>minutes</span></li>
+                <li class="blank">:</li>
+                <li class="item"><i class="second">00</i><span>seconds</span></li>
+                <li class="blank">:</li>
+                <li class="item"><i class="ms">00</i><span>milliseconds</span></li>
+            </ul>
+		</div>
+	</div>
+</body>
+</html>
